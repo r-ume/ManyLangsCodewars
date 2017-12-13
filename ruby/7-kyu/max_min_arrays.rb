@@ -5,6 +5,7 @@ In this Kata, you will be given an array of unique elements, and your task is to
 so that the first max value is followed by the first minimum, followed by second max value then second min value, etc.
 =end
 
+require 'rubygems'
 require 'pry'
 
 class Array
