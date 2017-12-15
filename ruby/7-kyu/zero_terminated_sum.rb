@@ -5,7 +5,6 @@ require 'pry'
 
 class String
   def zero_terminated_sum
-    binding.pry
     self.split('0').map(&:chars).reject(&:empty?).map { |element| element.map(&:to_i).sum }.sort.reverse.first.to_i
   end
 end
