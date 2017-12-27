@@ -10,7 +10,6 @@ import (
 
 func main(){
   fmt.Println(Opposite(-1))
-
 }
 
 func Opposite(value int) int {
