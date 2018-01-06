@@ -28,7 +28,7 @@ function averageLength(string_array){
 // Best Answer
 function bestAverageLength(string_array){
   const average = Math.round(string_array.join('').length / string_array.length);
-  return arr.map(element) => element[0].repeat(average));
+  return string_array.map(element) => element[0].repeat(average));
 }
 
 console.log(averageLength(['aa', 'bbb', 'cccc']));
