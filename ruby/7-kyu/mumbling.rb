@@ -11,6 +11,6 @@ require 'pry'
 
 class String
   def accum
-    self.chars.map { |n| n.join('') }
+    self.chars.map.with_index { |n, i|  (n * (i + 1)).capitalize }.join('-')
   end
 end
