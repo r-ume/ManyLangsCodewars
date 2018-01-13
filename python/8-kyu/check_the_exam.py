@@ -1,3 +1,5 @@
+# Check The Exam
+
 # The first input array contains the correct answers to an exam, like ["a", "a", "b", "d"]. 
 # The second one is "answers" array and contains student's answers.
 # The two arrays are not empty and are the same length. 
@@ -14,9 +16,9 @@
 def check_exam(array1, array2):
   score = 0
   for index in range(len(array1)):
-    if array2 == '':
+    if array2[index] == '':
       score += 0
-    if array1[index] == array2[index]:
+    elif array1[index] == array2[index]:
       score += 4
     else:
       score -= 1
