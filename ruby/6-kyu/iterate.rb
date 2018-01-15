@@ -33,6 +33,4 @@ class Object
   end
 end
 
-p 'str'.iterate(3) { |str|
-  str * 2
-}
+p 'str'.iterate(3) { |str| str * 2 }
