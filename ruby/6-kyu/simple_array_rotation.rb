@@ -29,19 +29,8 @@ class Array
     return 'D' if self == sorted_array.reverse
     return 'RA' if self.index(self.min) + 1 == self.index(sorted_array[1])
     'RD'
-    # result =
-    #   if self.sort == self
-    #     'A'
-    #   elsif self.sort.reverse == self
-    #     'D'
-    #   elsif self.index(self.min) + 1 == self.index(self.min + 1)
-    #     'RA'
-    #   else
-    #     'RD'
-    #   end
-    # result
   end
-  
+
   # best answer
   def best_solve
     if self.sort == self
