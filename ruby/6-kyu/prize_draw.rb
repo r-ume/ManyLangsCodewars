@@ -38,7 +38,7 @@ def best_rank(namestring:, weight:, rank:)
 end
 
 def rank_names(names:, weight:)
-  names.map.with_index { |name, index| [-score_name(name: name) * weight[index], name] }.sort.map{ |hoge, name| name }
+  names.map.with_index { |name, index| [-score_name(name: name) * weight[index], name] }.sort.map{ |_, name| name }
 end
 
 def score_name(name:)
