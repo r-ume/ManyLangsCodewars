@@ -20,15 +20,39 @@ import(
 )
 
 func main(){
-
-  fmt.Println(duplicate_count("indivisibility"))
+  fmt.Println(best_duplicate_count("indivisibility"))
+  fmt.Println(second_best_duplicate_count("aabBcde"))
 }
 
 // Best Answer
-func duplicate_count(word string) int {
-  count := 0
-  word = strings.ToLower(word)
-  chars := strings.Split(word, "")
+func best_duplicate_count(word string) int{
+  c := 0
+  h := map[rune]int{}
+  for _, r := range strings.ToLower(word){
+    if h[r]++; h[r] == 2 { 
+      c++ 
+    }
+  }
+
+  return c
+}
+
+func second_best_duplicate_count(word string) int{
+  counter := make(map[string]int)
+
+  for _, s := range word {
+    sl := strings.ToLower(string(s))
+    counter[sl] += 1
+  }
+
+  sum := 0
+  for _, v := range counter{
+    if v > 1{
+      sum += 1
+    }
+  }
+
+  return sum
 }
 
 // My Answer
